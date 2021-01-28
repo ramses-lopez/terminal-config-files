@@ -57,8 +57,8 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-" colorscheme synthwave84
-colorscheme shades_of_purple
+colorscheme synthwave84
+" colorscheme shades_of_purple
 
 " dbext connection strings
 " let g:dbext_default_profile_psql = 'type=PGSQL:host=localhost:port=5432:dbname=omx_development:user=ramses'
