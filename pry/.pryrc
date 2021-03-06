@@ -9,6 +9,10 @@ end
 
 # Load scratchpad for omx 
 if defined?(Omx)
+  # initialize the db connection
+  User.count
+  Integration::CountryRiskRating.count rescue puts "Integration database not reachable"
+
 	def omx
 		Company.find_by slug: 'omx'
 	end
