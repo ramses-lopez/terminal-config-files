@@ -25,7 +25,8 @@ endif
 call plug#begin()
   " Vim defaults
   Plug 'tpope/vim-sensible'
-  Plug '/usr/local/opt/fzf'
+  " Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'kchmck/vim-coffee-script'
   Plug 'tpope/vim-endwise'
