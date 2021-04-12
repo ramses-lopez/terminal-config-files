@@ -7,7 +7,16 @@ def r!
   reload!
 end
 
-# Load scratchpad for omx 
+def create_fixture_from(model)
+  model_name = model.class.name.pluralize.underscore
+  filename = "#{Rails.root}/test/fixtures/#{model_name}_#{model.id}.yml"
+  File.open(filename, 'w') do |file|
+    file.write model.attributes.except(:id, :created_at, :updated_at).to_yaml
+  end
+  puts "#{filename} written"
+end
+
+# Load scratchpad for omx
 if defined?(Omx)
   # initialize the db connection
   User.count
@@ -24,4 +33,4 @@ if defined?(Omx)
   def ramses
     User.find_by email: 'ramses@theomx.com'
   end
-end 
+end
