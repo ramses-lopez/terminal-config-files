@@ -61,10 +61,6 @@ endif
 colorscheme synthwave84
 " colorscheme shades_of_purple
 
-" dbext connection strings
-" let g:dbext_default_profile_psql = 'type=PGSQL:host=localhost:port=5432:dbname=omx_development:user=ramses'
-" let g:dbext_default_profile = 'psql'
-
 " Remappings
 nnoremap <leader>p :GFiles<CR>
 nnoremap <leader>f :Files<CR>
