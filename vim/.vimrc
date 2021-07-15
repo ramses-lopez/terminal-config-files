@@ -58,7 +58,8 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-colorscheme synthwave84
+" colorscheme synthwave84
+colorscheme onedark
 " colorscheme shades_of_purple
 
 " Remappings
