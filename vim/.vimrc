@@ -59,8 +59,9 @@ if exists('+termguicolors')
 endif
 
 " colorscheme synthwave84
-colorscheme onedark
+" colorscheme onedark
 " colorscheme shades_of_purple
+colorscheme jellybeans
 
 " Remappings
 nnoremap <leader>p :GFiles<CR>
@@ -73,3 +74,7 @@ nnoremap <leader>a :Ag<CR>
 
 " Remove trailing whitespace on save from certain files
 autocmd FileType ruby,javascript,html,haml,coffee,php autocmd BufWritePre <buffer> %s/\s\+$//e
+
+ab bb byebug
+ab bp binding.pry
+
