@@ -48,6 +48,7 @@ call plug#begin()
   Plug 'Rigellute/shades-of-purple.vim'
   Plug 'joshdick/onedark.vim'
   Plug 'sonph/onehalf'
+  Plug 'dracula/vim'
 
 call plug#end()
 
@@ -61,7 +62,8 @@ endif
 " colorscheme synthwave84
 " colorscheme onedark
 " colorscheme shades_of_purple
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme dracula
 
 " Remappings
 nnoremap <leader>p :GFiles<CR>
@@ -75,6 +77,7 @@ nnoremap <leader>a :Ag<CR>
 " Remove trailing whitespace on save from certain files
 autocmd FileType ruby,javascript,html,haml,coffee,php autocmd BufWritePre <buffer> %s/\s\+$//e
 
+" abbreviations
 ab bb byebug
 ab bp binding.pry
 
