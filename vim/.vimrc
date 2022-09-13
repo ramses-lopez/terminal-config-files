@@ -35,8 +35,8 @@ call plug#begin()
   " Alternate between relative and absolute numbers
   " Plug 'myusuf3/numbers.vim'
   " Plug 'vim-scripts/dbext.vim'
-  Plug 'tpope/vim-fugitive'
-  Plug 'neoclide/coc.nvim', {'branch': 'release' }
+  " Plug 'tpope/vim-fugitive'
+  " Plug 'neoclide/coc.nvim', {'branch': 'release' }
   Plug 'kana/vim-textobj-user'
   Plug 'nelstrom/vim-textobj-rubyblock'
   Plug 'tpope/vim-surround'
