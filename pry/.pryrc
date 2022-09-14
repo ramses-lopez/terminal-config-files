@@ -1,36 +1,30 @@
-puts 'Loading config from ~/.pryrc'
-Pry.config.editor = "vim"
+puts 'Loading global config from ~/.pryrc'
 
-puts 'Some more tips > https://pragmaticstudio.com/tutorials/rails-console-shortcuts-tips-tricks'
+ENV['PAGER'] = ' less --raw-control-chars -F -X'
+
+Pry.config.editor = "vim"
 
 def r!
   reload!
 end
 
+def q!
+  exit
+end
+
+
 def create_fixture_from(model)
-  model_name = model.class.name.pluralize.underscore
-  filename = "#{Rails.root}/test/fixtures/#{model_name}_#{model.id}.yml"
+  model_name = model.table_name
+  filename = "#{Rails.root}/test/fixtures/#{model_name}.yml"
+
   File.open(filename, 'w') do |file|
-    file.write model.attributes.except(:id, :created_at, :updated_at).to_yaml
+    text = model.column_names.reject {|current| %w(id created_at updated_at).include?(current) }.to_yaml
+    file.write text
   end
+
   puts "#{filename} written"
+rescue StandardError => e
+  Rails.logger.error e.message
+  Rails.logger.error e.backtrace.join("\n")
 end
 
-# Load scratchpad for omx
-if defined?(Omx)
-  # initialize the db connection
-  User.count
-  Integration::CountryRiskRating.count rescue puts "Integration database not reachable"
-
-	def omx
-		Company.find_by slug: 'omx'
-	end
-
-	def intldef
-		Company.find_by slug: 'intldef'
-	end
-
-  def ramses
-    User.find_by email: 'ramses@theomx.com'
-  end
-end
