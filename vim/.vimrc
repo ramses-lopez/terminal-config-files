@@ -11,6 +11,7 @@ set autoindent
 set cursorline
 set hlsearch
 set mouse=a
+set ttymouse=xterm2
 
 filetype plugin on
 syntax on
@@ -35,7 +36,7 @@ call plug#begin()
   " Alternate between relative and absolute numbers
   " Plug 'myusuf3/numbers.vim'
   " Plug 'vim-scripts/dbext.vim'
-  " Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-fugitive'
   " Plug 'neoclide/coc.nvim', {'branch': 'release' }
   Plug 'kana/vim-textobj-user'
   Plug 'nelstrom/vim-textobj-rubyblock'
@@ -80,4 +81,7 @@ autocmd FileType ruby,javascript,html,haml,coffee,php autocmd BufWritePre <buffe
 " abbreviations
 ab bb byebug
 ab bp binding.pry
+ab bk binding.break
+ab ir <%= %>
+ab irp <% %><cr><% end %>
 
