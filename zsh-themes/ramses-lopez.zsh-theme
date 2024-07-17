@@ -75,8 +75,8 @@ ramses_git_prompt () {
 }
 
 # No RVM or Node prompt
-#PROMPT=$'%{$fg[green]%}%D{[%X]} %{$fg[blue]%}[%~]%{$reset_color%} %{$reset_color%}$(ramses_git_prompt)\
-#%{$fg[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
-
-PROMPT=$'%{$fg[yellow]%}%D{[%X]} %{$fg[red]%}[$(rvm-prompt)] %{$fg[green]%}[$(nvm_prompt_info)] %{$fg[white]%}[%~]%{$reset_color%} %{$reset_color%}$(ramses_git_prompt)\
+PROMPT=$'%{$fg[green]%}%D{[%X]} %{$fg[blue]%}[%~]%{$reset_color%} %{$reset_color%}$(ramses_git_prompt)\
 %{$fg[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
+
+# PROMPT=$'%{$fg[yellow]%}%D{[%X]} %{$fg[red]%}[$(rvm-prompt)] %{$fg[green]%}[$(nvm_prompt_info)] %{$fg[white]%}[%~]%{$reset_color%} %{$reset_color%}$(ramses_git_prompt)\
+# %{$fg[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
