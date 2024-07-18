@@ -74,7 +74,5 @@ ramses_git_prompt () {
   echo $_result
 }
 
-# No RVM or Node prompt
-# PROMPT=$'%{$fg[green]%}%D{[%X]} %{$fg[blue]%}[%~]%{$reset_color%} %{$reset_color%}\
-PROMPT=$'$(ramses_git_prompt) %{$fg[blue]%}-> %{$reset_color%}'
+PROMPT=$'$(ramses_git_prompt)%{$fg[blue]%}› %{$reset_color%}'
 
